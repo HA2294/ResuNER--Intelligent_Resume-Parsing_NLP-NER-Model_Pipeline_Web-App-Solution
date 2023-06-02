@@ -1,9 +1,4 @@
-# NER Resume Pipelinen A-Web-Based-Solution Resume-Parsing
-
-##  3. model: KWs (skills) - extraction
-Based on SpyCy NEP with custom keywords matching (json - file with skills - attached). 
-Extraction algorithm was used for job and cv analysis, as well for similarity matching. 
-
+# NER Resume Pipeline Resume-Parsing Web App Solution 
 
 ## API - deployment
 Models were containerized (Docker), set up as API (FastAPI) and deployed on Google Cloud Plattform.
@@ -44,15 +39,12 @@ Based on gpt-2-simple library from Max Woolf - [https://minimaxir.com/2019/09/ho
 2. Set the runtime type as GPU
 3. Execute all cells from top to bottom
 
-
 ## 2. model: with Title labels 
 Model was trained based on cover letters text bodies with job titles and skills as additional metadata.
-
 
 ##  3. model: KWs (skills) - extraction
 Based on SpyCy NEP with custom keywords matching (json - file with skills - attached). 
 Extraction algorithm was used for job and cv analysis, as well for similarity matching. 
-
 
 ## API - deployment
 Models were containerized (Docker), set up as API (FastAPI), and deployed on Google Cloud Platform.
@@ -61,7 +53,6 @@ Endpoints: [https://jzl-search-api-v7otpcjevq-lz.a.run.app/docs](https://jzl-sea
 Cover letter generation: [https://jzl-api-v7otpcjevq-lz.a.run.app/?length=500&temperature=0.7&prefix=](https://jzl-api-v7otpcjevq-lz.a.run.app/?length=500&temperature=0.7&prefix=)
 
 (For customized letter creation, use the prefix variable in the format: **-Job Title-skill1, skill2, skill3**)
-
 
 # Job Boards - AI - deep dive into creation workflow
 
