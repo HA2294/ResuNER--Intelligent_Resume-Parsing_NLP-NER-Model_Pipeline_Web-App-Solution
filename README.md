@@ -52,15 +52,3 @@ Endpoints: [https://jzl-search-api-v7otpcjevq-lz.a.run.app/docs](https://jzl-sea
 Cover letter generation: [https://jzl-api-v7otpcjevq-lz.a.run.app/?length=500&temperature=0.7&prefix=](https://jzl-api-v7otpcjevq-lz.a.run.app/?length=500&temperature=0.7&prefix=)
 
 (For customized letter creation, use the prefix variable in the format: **-Job Title-skill1, skill2, skill3**)
-
-# Job Boards - AI - deep dive into creation workflow
-
-From the AI perspective, our main goal was to create a machine learning model capable of generating cover letters undistinguished from a human-written one. After reviewing different NLG approaches, we have decided to train an existing transformer model, as it proved to be the most efficient approach.
-
-The initial training of the small 124-M parameters GPT-2 model using a dataset of collected cover letters gave us impressive results (loss=0.19, avg=0.64, 1500 steps): the newly trained model was able to create text at a very high qualitative level, but the content was not relevant to the candidate's skills and job title. To address this, we adjusted the gpt-2-simple framework developed by Max Woolf. [1]
-
-To gain more control over the model output, we also decided to add skills extracted from cover letters and job titles to the training dataset. An article by Ivan Lai [2] helped us find this approach.
-
-Finding the most suitable model for correctly extracting skills from cover letters was a challenge. After experimenting with different NLP frameworks (BERT, TFIDF), we ultimately chose to use SpaCy's Named Entity Recognition model (en_core_web_sm) combined with EntityRuler for custom skills labeling. We obtained the skills dataset from the Microsoft repository on Github. [3]
-
-Although the dataset we used had only around 2000 listed skills, the final model met our expectations, correctly identifying most of the candidate skills in the tested cover letters
