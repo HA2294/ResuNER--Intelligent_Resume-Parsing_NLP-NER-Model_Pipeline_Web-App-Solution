@@ -25,9 +25,6 @@ In our results, we have seen that optimal results were achieved by using minimal
 The collected learnings gave the model opportunity to ignore by the text generation those prompted skills which are completely uncommon for the specific job profile, so it was not possible to create a cover letter for a Data Scientist with mention of a car driving license as a skill, for example.
 
 Another learning we have collected by the training is the fact that the used transformer model was able to recognize the weight of the specific skills via their count in the specific text. So it was also possible due to duplication of some skills in the prompt to increase their representation in the output text.
-ChatGPT
-markdown
-Copy code
 
 # Three Created AI-Models for Job Boards 
 
