@@ -27,17 +27,7 @@ To get more control over the model output we have decided also to add to the tra
 
 It was a challenge to find the most suitable model, which was able to extract correctly the skills from cover letters, but after some experiments with different NLP frameworks (BERT, TFIDF), we decided to use SpaCy Named Entity Recognition model (en\_core\_web\_sm) combined with EntityRuler for custom skills labeling. The skills dataset we found in Microsoft repository on Github. [3]
 
-Although the used dataset had only ca. 2000 listed skills the final model matched with our expectations, most of the candidate skills in the tested cover letters were correctly identified:
-
-![](images/image15.png)
-
-Img 1: Example of original cover letter from training dataset for the position Data Scientist
-
 The created NER (named entity recognition) framework helped us to add into the training dataset skills and job titles. The retrained GPT-2 based model was able to create a cover letter by prompting a set of skills, job title, or combination of both. In the results we were able to see that the generated text was relevant to the passed into the model information:
-
-![](images/image3.png)
-
-Img 2: Model output after prompt text: Data Scientist~python,sql,algorithms
 
 We need to mention that the description of experiences, the name of the candidate as well as the recipient was created here by the model randomly. Our next step will be extending the controlled parameters by those options, but we expect that here might be implemented the same approach as with the skills.
 
@@ -49,6 +39,7 @@ Another learning we have collected by the training is the fact that the used tra
 ChatGPT
 markdown
 Copy code
+
 # Three Created AI-Models for Job Boards 
 
 ## 1. model:simple without labels and metadata
