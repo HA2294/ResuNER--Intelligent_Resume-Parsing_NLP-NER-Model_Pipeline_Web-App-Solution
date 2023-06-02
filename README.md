@@ -10,6 +10,8 @@ From the AI perspective, our main goal was to create a machine learning model wh
 
 The first training of the small 124-M parameters GPT-2 model with the dataset of collected cover letters gave us very impressive results (loss=0.19, avg=0.64, 1500 steps): the newly trained model was able to create the text on a very high qualitative level, but the content was not relevant to the candidate skills and job title. For the model training, we have adjusted gpt-2-simple framework from Max Woolf. [1]
 
+![](Full_GPT_architecture.png)
+
 To get more control over the model output we have decided also to add to the training dataset skills extracted from cover letters and job titles. To find this approach helped us the article from Ivan Lai. [2]
 
 It was a challenge to find the most suitable model, which was able to extract correctly the skills from cover letters, but after some experiments with different NLP frameworks (BERT, TFIDF), we decided to use SpaCy Named Entity Recognition model (en\_core\_web\_sm) combined with EntityRuler for custom skills labeling. The skills dataset we found in Microsoft repository on Github. [3]
