@@ -14,11 +14,11 @@ The first training of the small 124-M parameters GPT-2 model with the dataset of
 
 To get more control over the model output we have decided also to add to the training dataset skills extracted from cover letters and job titles. To find this approach helped us the article from Ivan Lai. It was a challenge to find the most suitable model, which was able to extract correctly the skills from cover letters, but after some experiments with different NLP frameworks (BERT, TFIDF), we decided to use SpaCy Named Entity Recognition model (en\_core\_web\_sm) combined with EntityRuler for custom skills labeling.
 
+The skills dataset we found in Microsoft repository on Github. The created NER (named entity recognition) framework helped us to add into the training dataset skills and job titles. The retrained GPT-2 based model was able to create a cover letter by prompting a set of skills, job title, or combination of both. In the results we were able to see that the generated text was relevant to the passed into the model information: We need to mention that the description of experiences, the name of the candidate as well as the recipient was created here by the model randomly. 
+
+Our next step will be extending the controlled parameters by those options, but we expect that here might be implemented the same approach as with the skills.
+
 ![](elmo_structure.png)
-
-
-
-The skills dataset we found in Microsoft repository on Github. The created NER (named entity recognition) framework helped us to add into the training dataset skills and job titles. The retrained GPT-2 based model was able to create a cover letter by prompting a set of skills, job title, or combination of both. In the results we were able to see that the generated text was relevant to the passed into the model information: We need to mention that the description of experiences, the name of the candidate as well as the recipient was created here by the model randomly. Our next step will be extending the controlled parameters by those options, but we expect that here might be implemented the same approach as with the skills.
 
 In our results, we have seen that optimal results were achieved by using minimal numbers of skills as the prompt message – two or three, with a high probability those skills were recognized and implemented in the model text. Probably due to the small size of the training dataset the model was not capable of working with a bigger number of elements for proper prediction.
 
