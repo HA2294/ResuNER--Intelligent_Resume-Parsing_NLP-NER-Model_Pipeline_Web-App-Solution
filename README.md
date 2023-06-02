@@ -1,4 +1,4 @@
-# Spacy_Resume_Web_Parsing
+# NER Resume Pipelinen A-Web-Based-Solution Resume-Parsing
 
 ##  3. model: KWs (skills) - extraction
 Based on SpyCy NEP with custom keywords matching (json - file with skills - attached). 
