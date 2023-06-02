@@ -4,7 +4,7 @@
 Models were containerized (Docker), set up as API (FastAPI) and deployed on Google Cloud Plattform.
 Endpoints:  https://jzl-search-api-v7otpcjevq-lz.a.run.app/docs
 
-# Job Boards - AI - deep dive into creation workflow
+# Job Boards - Deep Dive into AI creation workflow
 
 From the AI perspective, our main goal was to create a machine learning model which was able to generate cover letters undistinguished from a human-written one. After reviewing different NLG approaches we have decided for the training already existing transformer model, as the most efficient approach.
 
