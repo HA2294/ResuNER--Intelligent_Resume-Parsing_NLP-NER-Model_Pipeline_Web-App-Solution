@@ -1,4 +1,4 @@
-# NER Resume Pipeline Resume-Parsing Web App Solution 
+# NER Resume-Parsing Pipeline (Web_App Solution)
 
 ## API - deployment
 Models were containerized (Docker), set up as API (FastAPI) and deployed on Google Cloud Plattform.
