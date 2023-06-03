@@ -26,6 +26,8 @@ The collected learnings gave the model opportunity to ignore by the text generat
 
 Another learning we have collected by the training is the fact that the used transformer model was able to recognize the weight of the specific skills via their count in the specific text. So it was also possible due to duplication of some skills in the prompt to increase their representation in the output text.
 
+
+
 # Three Created AI-Models for Job Boards 
 
 ## 1. model:simple without labels and metadata
